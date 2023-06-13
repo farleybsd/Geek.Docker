@@ -1,0 +1,15 @@
+# Armazenar e Reutilizar Dados
+host: geek
+datacenter:
+  location: &SP São Paulo # Criando um Ancora Armazenar e Reutilizar Dados
+---
+host: udemy
+datacenter:
+  location: *SP # Ulizando um Ancora Armazenar e Reutilizar Dados
+---
+---
+roles: &ghost
+- webserver
+- database
+---
+roles: *ghost

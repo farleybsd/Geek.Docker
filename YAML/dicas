@@ -1,0 +1,7 @@
+1 - Use Espacos e nao TABS
+2 - USE '-' tracos para listas
+3 - Use ':' Dois pontos para Chave e Valor
+4 - Dois Espacos
+datacenter:
+  location: Sao Paulo
+  router: 42

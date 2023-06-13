@@ -1,0 +1,20 @@
+# Limitando a estrutura para poder repetir as chaves
+host: geek
+datacenter:
+  location: Sao Paulo
+  router: 43
+  switch: 32
+# Limitando a estrutura para poder repetir as chaves
+---
+host: udemy
+datacenter:
+  location: Colorado
+  router: 23
+  switch: 21
+# Limitando a estrutura para poder repetir as chaves
+---
+host: outro
+datacenter:
+  location: aaa
+  router:
+  switch:

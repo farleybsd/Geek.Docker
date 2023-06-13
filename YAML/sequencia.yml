@@ -1,0 +1,21 @@
+# Lista De Valores
+# Litas Arrays Colecoes
+# Nao pode ser vazia ou linhas em brancos
+# Modo Bloco
+roles:
+- Webserver
+- database
+
+# Errado 
+#- payload
+#  - bitcoin
+#  - 
+#  - ethereum
+
+# Correto
+payload:
+- bitcoin
+- ethereum
+
+# Modo Flow
+payload2: [bitcoin, ethereum]

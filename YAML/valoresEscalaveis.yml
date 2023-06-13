@@ -1,0 +1,21 @@
+#Valores Unicos
+host: geek
+datacenter:
+  location: Sao Paulo
+  router: 42
+  switch: 34
+roles:
+- webserver
+- database
+# Multiplos Valores
+funcionamento: |
+  segunda -  das 08:00 as 17:00
+  terca   -  das 09:00 as 18:00
+  quarta  -  das 10:00 as 19:00
+  quinta  -  das 11:00 as 20:00
+  sexta   -  das 12:00 as 21:00
+  sabado  -  das 13:00 as 22:00
+  domingo -  das 14:00 as 23:00
+
+# Valor Escalar de Multiplas Linhas na mesma linha 
+comentarios: "Temos alto uso de cpu  desde 04/10/2020  estamos investigando    \n    Felicity Jones \n    FelicityJones@gmail.con \n"

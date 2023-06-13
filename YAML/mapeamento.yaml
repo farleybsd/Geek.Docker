@@ -1,0 +1,4 @@
+host: geek # 1 Espaco
+datacenter:
+  location: Sao Paulo # 2 Espacos
+  router: 42 # 2 Espacos
