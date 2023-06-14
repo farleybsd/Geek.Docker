@@ -1,0 +1,34 @@
+# Verificar Versao do Docker
+docker --version 
+# Listar todos os commandos
+docker --help
+# Listar os containers
+docker container ls
+# Help de um commando especifico
+docker container --help
+# Mostrar containers em execucao
+docker ps 
+# Mostrar containers Todos Containers (incluindo os parados)
+docker ps -a
+# Iniciando um Container
+docker container start aa93a0f04735
+# Parando um container
+docker container stop aa93a0f04735
+# Logs  container
+docker container logs aa93a0f04735
+# Baixando uma imagem (Sempre Espeficicar uma versao nunca usar a ultima)
+docker pull postgres:13.1
+# Baixando uma imagem e subindo um Container (Sempre Espeficicar uma versao nunca usar a ultima)
+docker run postgres:13.1
+# Listando Imagens Docker
+docker image ls
+# Removendo uma Imagem
+docker image rm 082f128fd65a
+# Especionando uma imagem
+docker image inspect 407cece1abff
+# Criando uma Tag a partir de uma imagem
+docker image tag postgres:13.1 guniversity-postgres       repositoryname + Tag
+# Deletando uma Imagem Vinculada a um container
+docker image rm 9c7a54a9a43c -f
+# Deletando uma imagem vinculada a uma TAG
+docker image rm 407cece1abff -f

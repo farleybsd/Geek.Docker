@@ -1,0 +1,8 @@
+# Acessando A Porta De Um Container
+- Entrypoint quiet logs
+ docker run -d -e NGINX_ENTRYPOINT_QUIET_LOGS=1 nginx:1.19.4-alpine
+
+# Fazeno MIRROR(ESPELHAMENTO) da porta do docker ser acessada de fora do docker
+- 8080 porta de acesso externo
+- 80 porta do docker 
+docker run -d -p 8080:80 nginx:1.19.4-alpine
