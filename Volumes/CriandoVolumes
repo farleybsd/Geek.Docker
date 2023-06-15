@@ -1,0 +1,14 @@
+# Criando um Container  ja com acesso ao Shell
+docker run --name linux_alpine --rm -i -t alpine:3.12.1 sh
+# Saindo do Container 
+Control + d
+# Volumes
+Fazendo uso de volumes, exposmos arquivos e diretorios da nossa maqina para o container.
+# Criando Volumes apenas no container
+docker run -v "/var/www" --name servidorWeb -d -e NGINX_ENTRYPOINT_QUIET_LOGS=1 nginx:1.19.4-alpine
+# Acessando Shell do Docker
+docker exec -it servidorWeb sh 
+# Criando Um Volume entre Maquina real e o container
+docker  run --name "ServidorWeb" -d -p 8080:80 -e NGINX_ENTRYPOINT_QUIET_LOGS=1  -v "C:\Geek:/usr/share/nginx/html" nginx:1.19.4-alpine 
+# Inspesionando O Container
+docker inspect 6916c1176743
