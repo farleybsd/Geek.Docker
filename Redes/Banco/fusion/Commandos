@@ -1,0 +1,9 @@
+# Gerando Imagem do Banco de dados 
+docker build -f pgfusion.dockerfile -t farleybsd/pgfusion:v1 .
+docker run --name "pgfusion" -d farleybsd/pgfusion:v1
+
+# Gerando Imagem Servidor Web (Tem que subir container do banco Primeiro )
+docker build -f fusion.dockerfile -t farleybsd/fusion:v1 .
+docker run --name "fusion" -d -p 8080:8000 farleybsd/fusion:v1
+# Verificando Ip do banco
+docker run --name "pgfusion" -d farleybsd/pgfusion:v1

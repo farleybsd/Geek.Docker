@@ -1,0 +1,24 @@
+# Mostrando Redes
+docker network ls
+# Modo Bride (Defaul)
+docker run --net bridge --rm alpine:3.12.1 sh -c "ifconfig"
+# Modo Host (Pega as mesma informacoes de rede do Hospedeiro)
+docker run --net host --rm alpine:3.12.1 sh -c "ifconfig"
+# Especionando uma Rede
+docker network inspect bridge
+# Fazendo Teste de Ping Containers
+docker run --name "container_1_bridge" -d alpine:3.12.1 sleep 5000
+docker run --name "container_2_bridge" -d alpine:3.12.1 sleep 5000
+# Vendo o Id container 1
+docker exec -it container_1_bridge ifconfig
+# Acessando o Shell do container 2
+docker exec -it container_2_bridge sh
+# Fazer um Ping do Container container 1 p/ container 2
+
+# Criando uma rede (Se nao tiver na mesma rede nao se comunica)
+docker network create --driver bridge outra_faixa
+docker run --name "container_3_bridge_nova_faixa" -d --net outra_faixa alpine:3.12.1 sleep 5000
+# Adicionando mais uma bridge ao container 
+docker network connect bridge container_3_bridge_nova_faixa
+# Removendo mais uma bridge ao container 
+docker network disconnect bridge container_3_bridge_nova_faixa

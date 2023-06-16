@@ -1,3 +1,3 @@
 # Gerando a Imagem 
 docker build -f Dockerfile -t farleybsd/fusion:v1 .
-dcoker run --name "fusion" -d -p 8080:8000 farleybsd/fusion:v1
+docker run --name "fusion" -d -p 8080:8000 farleybsd/fusion:v1
