@@ -2,3 +2,6 @@
 docker build -f Dockerfile -t farleybsd/servidorweb:v1 .
 # Criando um Container a partir de uma imagem 
 docker run --name "ServidorWeb" -d -p 8080:80  farleybsd/servidorweb:v1
+# Publicando Imagem no Docker Hub
+docker login --username=farley.t.i@hotmail.com
+docker image push farleybsd/servidorweb:v1 
